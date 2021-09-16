@@ -4,14 +4,16 @@ public class Student {
 
     private String name;
 
-    public Student(String name){
+    public Student(String name) {
 
         this.name = name;
     }
-    public void setName (String studName){
+
+    public void setName(String studName) {
         name = studName;
     }
-    public String getName (){
+
+    public String getName() {
         return name;
     }
 

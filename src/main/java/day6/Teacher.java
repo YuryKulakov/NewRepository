@@ -9,31 +9,33 @@ public class Teacher {
     String subject;
 
 
-    public Teacher(String name, String subject){
+    public Teacher(String name, String subject) {
         this.name = name;
         this.subject = subject;
     }
-    public void setName (String teachName){
+
+    public void setName(String teachName) {
         name = teachName;
     }
-    public String getName (){
+
+    public String getName() {
         return name;
     }
-    public void setSubject (String teachSubject){
+
+    public void setSubject(String teachSubject) {
         subject = teachSubject;
     }
-    public String getSubject (){
+
+    public String getSubject() {
         return subject;
     }
 
-    public void evaluate(Student student){
+    public void evaluate(Student student) {
         int rating;
         String ratingVariate = "";
         Random random = new Random();
-
         rating = random.nextInt(4) + 2;
-
-        switch (rating){
+        switch (rating) {
             case 2:
                 ratingVariate = "Неудовлетворительно";
                 break;
@@ -48,8 +50,7 @@ public class Teacher {
                 break;
 
         }
-        System.out.println("Преподаватель " + getName() + " оценил студента с именем " + student.getName() + " по предмету " + this.subject + " на оценку " + ratingVariate + " .");
-
+        System.out.println("Преподаватель " + getName() + " оценил студента с именем " + student.getName() + " по предмету " + getSubject() + " на оценку " + ratingVariate + " .");
 
 
     }
