@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class Teacher {
 
-    String name;
-    String subject;
+   private String name;
+   private String subject;
 
 
     public Teacher(String name, String subject) {

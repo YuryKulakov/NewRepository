@@ -2,9 +2,9 @@ package day6;
 
 public class AirPlane {
 
-    String producer;
-    int weight, year, length;
-    int fuel ;
+   private String producer;
+   private int weight, year, length;
+   private int fuel ;
 
     public AirPlane (String producer, int year, int length, int weight, int fuel){
         this.producer = producer;

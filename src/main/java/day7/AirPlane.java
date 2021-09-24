@@ -12,14 +12,13 @@ public class AirPlane {
         this.year = year;
         this.length = length;
         this.weight = weight;
-        this.fuel = fuel;
     }
     void info(){
         System.out.println("Изготовитель: " + producer + ", " + "год изготовления: " + year + ", " + "длина: " + length + ", " + "вес: " + weight + ", " + "Количество топлива в баке: " + fuel + ".");
     }
-    public int fillUp(int n){
+    public void fillUp(int n){
         fuel = fuel + n;
-        return fuel;
+
     }
     public String getProducer() {
         return producer;
