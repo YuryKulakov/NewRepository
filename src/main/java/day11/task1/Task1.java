@@ -18,10 +18,10 @@ public class Task1 {
 
         courier1.doWork();
         picker1.doWork();
-
     }
-    static void businessProcess(Worker worker){
-        for (int i=1;i<=10000;i++){
+
+    static void businessProcess(Worker worker) {
+        for (int i = 1; i <= 10000; i++) {
             worker.doWork();
         }
         worker.bonus();
