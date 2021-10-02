@@ -40,20 +40,9 @@ public class WorkerAbstract implements Worker {
 
     @Override
     public void doWork() {
-        warehouse.countDO();
     }
 
     @Override
     public void bonus() {
-        if (warehouse.getCountDeliveredOrders() >= 10000 && isPayed) {
-            bonusPayed += 50000;
-            System.out.println("Вам начислен бонус " + bonusPayed);
-            salary += 50000;
-            isPayed = false;
-        } else if (warehouse.getCountDeliveredOrders() <= 10000 && isPayed) {
-            System.out.println("Бонус пока не доступен.");
-        } else {
-            System.out.println("Бонус уже был выпачен.");
-        }
     }
 }

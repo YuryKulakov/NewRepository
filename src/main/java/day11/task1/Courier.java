@@ -16,12 +16,21 @@ public class Courier extends WorkerAbstract {
 
     @Override
     public void doWork() {
-        super.doWork();
+        warehouse.countDO();
         salary += SALARY;
     }
 
     @Override
     public void bonus() {
-        super.bonus();
+        if (warehouse.getCountDeliveredOrders() >= 10000 && isPayed) {
+            bonusPayed += 50000;
+            System.out.println("Вам начислен бонус " + bonusPayed);
+            salary += 50000;
+            isPayed = false;
+        } else if (warehouse.getCountDeliveredOrders() <= 10000 && isPayed) {
+            System.out.println("Бонус пока не доступен.");
+        } else {
+            System.out.println("Бонус уже был выпачен.");
+        }
     }
 }
